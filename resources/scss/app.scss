@@ -1,0 +1,299 @@
+@import '~bootstrap/scss/bootstrap';
+@import 'partials/mixins';
+@import 'partials/variables';
+// generali
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+// layout
+.container {
+    max-width: 1200px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+// header
+header {
+    height: 95px;
+    line-height: 95px;
+
+    .container {
+        height: 100%;
+        @include flex ($type: 'both');
+
+        .logo {
+            display: flex;
+        }
+
+        .logo img {
+            height: 65px;
+            line-height: 95px;
+        }
+
+        nav ul {
+            display: flex;
+
+            li {
+
+                font-size: $font-medium;
+                padding-inline: 15px;
+
+                &:hover,
+                &.active {
+                    border-bottom: 6px solid $primary;
+                }
+
+                a {
+                    color: $text-nav;
+                }
+            }
+        }
+    }
+}
+
+// REGOLE JUMBOTRON:
+.jumbo{
+    height: 400px;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 20% 0;
+    }
+}
+
+// REGOLE SEZIONE BLU MERCHANDISE:
+.merchandise {
+    background-color: $primary;
+    height: 125px;
+
+    .container {
+        @include flex ($type: 'both');
+        height: 100%;
+        padding: 10px 40px;
+
+        li {
+            @include flex ($type: 'center');
+            padding-inline: 10px;
+
+            img {
+                height: 50px;
+            }
+
+            a {
+                padding-left: 5px;
+                font-size: $font-medium;
+                color: $text-white;
+            }
+        }
+    }
+}
+
+// REGOLE FOOTER
+footer {
+
+    // SECTION 1
+    .links {
+        background-image: url(/resources/img/footer-bg.jpg);
+        background-size: cover;
+        color: $text-white;
+
+        ul{
+            padding-left: 0px;
+        }
+        .container {
+            @include flex ($type: 'both');
+            position: relative;
+            overflow: hidden;
+
+            .ms_cols {
+                display: flex;
+                
+                .ms_col {
+                    padding: 30px 0;
+
+                    .ms_mt_top {
+                        margin-top: 20px;
+                    }
+
+                    a {
+                        color: #5f5f5f;
+                        font-size: $font-small;
+                    }
+
+                    &.ms_center {
+                        padding-inline: 30px;
+                    }
+                }
+            }
+
+            .bg-logo {
+                width: 500px;
+                height: 350px;
+            }
+
+            .bg-logo img {
+                position: absolute;
+                right: 0;
+                top: -80px;
+            }
+        }
+
+    }
+
+    // SECTION 2
+    .sub-footer {
+        height: 90px;
+        background-color: #303030;
+
+        .container {
+            @include flex ($type : 'both');
+            height: 100%;
+
+            .sign-up {
+                color: $text-white;
+                padding: 10px;
+                border: 2px solid $primary;
+            }
+
+            .social {
+                @include flex ($type: 'center');
+
+                ul {
+                    @include flex ($type: 'center');
+
+                    li {
+                        padding: 0 10px;
+                    }
+                }
+
+                span {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+// REGOLE HOME:
+main {
+    background-color: #1c1c1c;
+
+    .container {
+        color: $text-white;
+        text-align: center;
+        padding: 30px 0;
+        position: relative;
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            margin-inline: -15px;
+
+            .ms_card {
+                width: calc(100% / 6 - 30px);
+                margin: 20px 15px;
+
+                h4 {
+                    margin-top: 10px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .button {
+            display: inline-block;
+            color: $text-white;
+            background-color: $primary;
+            font-weight: bolder;
+            margin-top: 20px;
+
+            &.current {
+                padding: 10px 20px;
+                position: absolute;
+                left: 0;
+                top: -40px;
+            }
+
+            &.load {
+                padding: 10px 40px;
+            }
+        }
+    }
+}
+
+// REGOLE SINGOLA CARD
+.blue-bar{
+    height: 75px;
+    background-color: $primary;
+    position: relative;
+
+    img{
+        position: absolute;
+        left: 350px;
+        top: -225px;
+        height: 300px;
+    }
+}
+
+.single-comic{
+    @include flex ($type: 'both');
+    padding: 50px 0;
+    
+    .sx{
+        width: 70%;
+
+        h1{
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .green-bar{
+            background-color: #55ba59;
+            padding: 20px 30px;
+            @include flex ($type: 'both');
+            margin: 20px 0;
+            font-weight: bold;
+
+            .light-green{
+                color: #9de673;
+            }
+
+            .white{
+                color: $text-white;
+            }
+
+            .availability{
+                padding-left: 30px;
+            }
+        }
+
+        p{
+            color: $text-nav;
+            line-height: 30px;
+        }
+    }
+}
+
+
+
