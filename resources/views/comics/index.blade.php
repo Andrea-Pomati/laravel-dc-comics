@@ -1,14 +1,11 @@
 @extends('layouts/main-layout')
 
 @section('content')
-
+<div class="container">
     <table class="table table-striped">
         <thead>
             <th>
                 Titolo
-            </th>
-            <th>
-                Descrizione
             </th>
             <th>
                 Prezzo
@@ -31,17 +28,17 @@
             @foreach ($comics as $comic)
                 <tr>
                     <td>{{$comic->title}}</td>
-                    <td>{{$comic->description}}</td>
+                    
                     <td>{{$comic->price}}</td>
                     <td>{{$comic->series}}</td>
                     <td>{{$comic->sale_date}}</td>
                     <td>{{$comic->type}}</td>
                     <td>
-                        <a href="">Apri</a>
+                        <a href="{{route('comics.show', $comic->id)}}">apri</a>
                     </td>
                 </tr>
             @endforeach
         </tbody>
     </table>   
-
+</div>
 @endsection
