@@ -39,6 +39,13 @@
                 </tr>
             @endforeach
         </tbody>
-    </table>   
+    </table>
+    
+<hr class="mb-6">
+
+<div class="container text-center py-5">
+    <a href="{{route('comics.create')}}">Aggiungi un fumetto</a>
+</div>
+
 </div>
 @endsection
