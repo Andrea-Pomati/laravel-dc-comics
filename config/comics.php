@@ -1,5 +1,5 @@
 <?php
-
+//$comics =
 return [
     [
         "title" => "Action Comics #1000: The Deluxe Edition",
