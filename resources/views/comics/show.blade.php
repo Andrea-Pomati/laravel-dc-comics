@@ -33,6 +33,18 @@
         <div class="col-3">Tipo</div>
         <div class="col-9">{{$comic->type}}</div>
     </div>
+    
+
+    <a href="{{route('comics.edit', $comic->id)}}">
+        <button class="btn btn-primary">Aggiorna</button>
+    </a>
+
+    <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn btn-danger">Cancella</button>
+    </form>
+
 </main>
 
 @endsection
