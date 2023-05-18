@@ -26,37 +26,37 @@
 
             <div class="mb-3">
                 <label for="title">Titolo</label>
-                <input class="form-control" type="text" name="title" id="title">
+                <input class="form-control" type="text" name="title" id="title" value="{{old('title')}}">
             </div>
 
             <div class="mb-3">
                 <label for="description">Descrizione</label>
-                <textarea class="form-control"  name="description" id="description"></textarea>
+                <textarea class="form-control"  name="description" id="description">{{old('description')}}</textarea>
             </div>
 
             <div class="mb-3">
                 <label for="thumb">Link Immagine</label>
-                <input class="form-control" type="text" name="thumb" id="thumb">
+                <input class="form-control" type="text" name="thumb" id="thumb" value="{{old('thumb')}}">
             </div>
 
             <div class="mb-3">
                 <label for="price">Prezzo</label>
-                <input class="form-control" type="number" name="price" id="price">
+                <input class="form-control" type="number" name="price" id="price" value="{{old('price')}}">
             </div>
 
             <div class="mb-3">
                 <label for="series">Serie</label>
-                <input class="form-control" type="text" name="series" id="series">
+                <input class="form-control" type="text" name="series" id="series" value="{{old('series')}}">
             </div>
 
             <div class="mb-3">
                 <label for="sale_date">Data di lancio</label>
-                <input class="form-control" type="date" name="sale_date" id="sale_date">
+                <input class="form-control" type="date" name="sale_date" id="sale_date" value="{{old('sale_date')}}">
             </div>
 
             <div class="mb-3">
                 <label for="type">Tipo</label>
-                <input class="form-control" type="text" name="type" id="type">
+                <input class="form-control" type="text" name="type" id="type" value="{{old('type')}}">
             </div>
 
            <button type="submit" class="btn btn-primary">Aggiungi</button>
