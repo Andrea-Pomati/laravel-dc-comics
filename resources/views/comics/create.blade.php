@@ -3,7 +3,22 @@
 @section('content')
     
     <div class="container">
-       
+
+        @if ($errors->any())
+        <div class="alert alert-danger" id="lista" role="alert">
+            <ul>
+
+                @foreach ($errors->all() as $error)
+                        <li>{{$error}}</li>
+                @endforeach
+    
+            </ul>
+          
+
+        </div>
+        
+        @endif
+
         <h1>Aggiungi un fumetto</h1>
 
         <form action="{{route('comics.store')}}" method="POST" class="py-5">
