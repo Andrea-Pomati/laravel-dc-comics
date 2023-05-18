@@ -36,7 +36,20 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+
+        $request->validate([
+            'title' => 'required|max:200',
+            'description' => 'required',
+            'thumb' => 'required',
+            'price' => 'required|max:10',
+            'series' => 'required|max:50',
+            'sale_date' => 'required',
+            'type' => 'required|max:20',
+
+
+        ]);
+
         $formData = $request->all();
 
         $formData['price'] = '$' . number_format($formData['price'], 2);

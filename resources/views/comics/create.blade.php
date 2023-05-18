@@ -1,7 +1,9 @@
 @extends('layouts/main-layout')
 
 @section('content')
+    
     <div class="container">
+       
         <h1>Aggiungi un fumetto</h1>
 
         <form action="{{route('comics.store')}}" method="POST" class="py-5">
@@ -17,7 +19,6 @@
                 <textarea class="form-control"  name="description" id="description"></textarea>
             </div>
 
-            
             <div class="mb-3">
                 <label for="thumb">Link Immagine</label>
                 <input class="form-control" type="text" name="thumb" id="thumb">
