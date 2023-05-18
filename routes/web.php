@@ -23,4 +23,4 @@ Route::get('/', [PageController::class, 'home'])->name('home');
 // });
 
 //rotta per il resource controller dei comics
-Route::resource('/comics', ComicController::class);
+Route::resource('comics', ComicController::class);
